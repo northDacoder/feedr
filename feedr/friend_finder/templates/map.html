@@ -1,0 +1,36 @@
+{% extends 'base_template.html' %}
+{% load staticfiles %}
+
+{#{% block extra_head %}#}
+{#    <link rel="stylesheet" type="text/css" href="{% static "css/map.css" %}">#}
+{#    <script src="https://maps.googleapis.com/maps/api/js"></script>#}
+{#    <script type="text/javascript">#}
+{#        var photoData = {{ photo_json | safe }};#}
+{#    </script>#}
+{#    <script type="text/javascript" src="{% static "js/map.js" %}"></script>#}
+{#{% endblock extra_head %}#}
+
+{% block content %}
+
+    <div id="map_canvas"></div>
+    <div id="zoomout"><i class="fa fa-minus-circle"></i></div>
+    <div id="zoomin"><i class="fa fa-plus-circle"></i></div>
+    <div id="legend">
+        <ul>
+            <li>9.20 - 9.21 Beyond Wonderland 2014</li>
+            <li>9.24 - 9.28 Arizona State University</li>
+            <li>9.30 - 10.03 University of Texas</li>
+            <li>10.04 - 10.07 Texas A&M University</li>
+            <li>10.13 - 10.17 Louisiana State University</li>
+            <li>10.18 - 10.21 University of Central Florida</li>
+            <li>10.23 - 10.25 University of Tennessee</li>
+            <li>10.27 - 10.30 Penn State University</li>
+            <li>11.01 - 11.04 Ohio State University</li>
+            <li>11.05 - 11.08 University of Cincinnati</li>
+            <li>11.10 - 11.13 Oklahoma State University</li>
+            <li>11.15 - 11.19 Ohio State University</li>
+        </ul>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,30 @@
+{% extends 'base_template.html' %}
+
+{% block content %}
+    <div id="map_canvas"></div>
+    <div id="map_canvas_overlay"></div>
+    <div class="well col-sm-4 col-sm-offset-4" id="profile-well">
+        <div class="row">
+            <ul class="col-sm-6 col-sm-offset-3">
+                <!--<li>First Name: {{ profile.first_name }}</li>
+                <li>Last Name: {{ profile.last_name }}</li>-->
+                <li>{{ profile.name }}</li>
+                <!--<li>{{ profile.gender }}</li>-->
+                <!--<li>{{ profile.timezone }}</li>-->
+                <!--<li>{{ profile.updated_time }}</li>-->
+                <!--<li>{{ profile.id }}</li>->
+                <!-- <li>{{ profile.verified }}</li> -->
+                <!--<li>{{ profile.locale }}</li>-->
+            </ul>
+            <center><img src="{{ picture_url }}" class="img-responsive img-circle" id="profile-image"></center>
+            <br><br>
+            <div class="col-sm-10 col-sm-offset-1">
+                <a href="mailto:{{ profile.email }}" class="btn btn-success btn-lg btn-block" id="profile-email"><i class="fa fa-envelope"></i> {{ profile.email }}</a></li>
+                <!--<h1 class="text-center">Hometown: {{ profile.hometown.name }}</h1>-->
+                <!--<h2 class="text-center">Full Name: {{ profile.name }}</h2>-->
+                <!--<h2 class="text-center">Favorite Teams: {% for team in profile.favorite_teams %}{{ team.name }} {% endfor %}</h2>-->
+                <a href="{{ profile.link }}" class="btn btn-primary btn-lg btn-block"><i class="fa fa-facebook"></i> PROFILE</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

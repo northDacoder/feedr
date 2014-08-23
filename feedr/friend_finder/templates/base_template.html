@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Custom Font Icons -->
+        <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing|Cherry+Cream+Soda|Josefin+Sans:100,400|Rokkitt|Graduate|Pacifico|Special+Elite|Playball|Sancreek' rel='stylesheet' type='text/css'>
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../static/css/map.css">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"></script>
+        <script type="text/javascript" src="../static/js/map.js"></script>
+
+{#        {% block extra_head %}#}
+{#        {% endblock extra_head %}#}
+    </head>
+    <body>
+
+        <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation" id="static-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" id="home-link"><i class="fa fa-twitter"></i> LetsGo</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              {% if not user.is_authenticated %}
+                <li><a href="{% url "social:begin" "facebook" %}">Facebook Login</a></li>
+            {% else %}
+                <li><a href="{% url "profile" %}">Profile</a></li>
+                <li><a href="{% url "map" %}">Map</a></li>
+{#                <li><a href="{% url "logout" %}">Logout</a></li>#}
+                <li><a href="#" id="fb-logout">Logout</a></li>
+            {% endif %}
+{#                <li><a href="{% url "map" %}">Map</a></li>#}
+{#            <li class="active"><a href="#">Home</a></li>#}
+{#            <li><a href="#about">About</a></li>#}
+{#            <li><a href="#contact">Contact</a></li>#}
+{#            <li class="dropdown">#}
+{#              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>#}
+{#              <ul class="dropdown-menu" role="menu">#}
+{#                <li><a href="#">Action</a></li>#}
+{#                <li><a href="#">Another action</a></li>#}
+{#                <li><a href="#">Something else here</a></li>#}
+{#                <li class="divider"></li>#}
+{#                <li class="dropdown-header">Nav header</li>#}
+{#                <li><a href="#">Separated link</a></li>#}
+{#                <li><a href="#">One more separated link</a></li>#}
+{#              </ul>#}
+{#            </li>#}
+          </ul>
+{#          <ul class="nav navbar-nav navbar-right">#}
+{#            {% if not user.is_authenticated %}#}
+{#                <li><a href="{% url "social:begin" "facebook" %}" class="btn btn-lg btn-info">Facebook Login</a></li>#}
+{#            {% else %}#}
+{#                <li><a href="{% url "profile" %}" class="btn btn-lg btn-info">Profile</a></li>#}
+{#                <li><a href="{% url "map" %}">Map</a></li>#}
+{#                <li><a href="{% url "logout" %}">Logout</a></li>#}
+{#            {% endif %}#}
+{#                <li><a href="../navbar-fixed-top/">Map</a></li>#}
+{#          </ul>#}
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+        <div class="container-fluid" style="width: 100%; margin: 0; padding: 0; position: absolute; top: 0px;">
+
+            <div id="map-container">
+                {% block content %}
+                {% endblock %}
+            </div>
+
+        </div>
+    </body>
+        <script type="text/javascript">
+            var photoData = {{ photo_json | safe }};
+        </script>
+</html>

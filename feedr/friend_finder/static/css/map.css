@@ -1,0 +1,124 @@
+#static-nav {
+    /*background: rgba(235,242,241,1);*/
+    background: rgba(242,87,69,.7);
+    background: rgba(169,210,92,.8);
+    height: 70px;
+    padding-top: 10px;
+    border-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#static-nav a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Special Elite', cursive;
+    text-shadow: none;
+}
+
+#home-link {
+    padding-top: 10px;
+}
+
+#map_canvas {
+    height: 1200px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: -2;
+}
+
+#map_canvas_overlay {
+    /*background: rgba(3,166,150,.4);*/
+    height: 1200px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+
+#map-container {
+    text-align: center;
+}
+
+
+#profile-well {
+    margin-top: 150px;
+    background: rgba(235,242,241,1);
+    background: rgba(242,87,69,1);
+    background: rgba(0,0,0,.7);
+    border-radius: 8px;
+    border: 5px solid #3c3c3c;
+}
+
+#profile-well h1, #profile-well h2 {color: #eeeeee; font-family: 'Rokkitt'; font-size: 16px;}
+#profile-image {border: 3px solid rgba(255,255,255,1);}
+#profile-email {color: #eeeeee; text-align: center; font-size: 12px; margin-bottom: 10px;}
+
+ul {list-style-type: none; padding: 0;}
+ul li {font-family: 'Open Sans', sans-serif; color: white; font-size: 24px; text-align: center;}
+
+#legend {
+    background: rgba(242,87,69,.7);
+    background: rgba(169,210,92,.8);
+    padding: 20px 40px;
+    z-index: 10000000;
+    position: absolute;
+    top: 70px;
+    color: #eeeeee;
+}
+
+#legend ul li {
+    padding-top: 5px;
+    font-size: 16px;
+    text-align: left;
+    color: rgba(255,255,255,.8);
+    font-family: 'Special Elite', cursive;
+}
+
+#legend ul li:hover {
+    color: rgba(255,255,255,1);
+}
+#zoomout {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    /*border: 5px solid rgba(242,87,69,.7);*/
+    /*border-radius: 50%;*/
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: rgba(242,87,69,.7);
+    color: rgba(169,210,92,1);
+    text-shadow: 0px 0px 5px #333;
+    font-size: 50px;
+}
+
+#zoomin {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    /*border: 5px solid rgba(242,87,69,.7);*/
+    /*border-radius: 50%;*/
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: rgba(242,87,69,.7);
+    color: rgba(169,210,92,1);
+    text-shadow: 0px 0px 5px #333;
+    font-size: 50px;
+}
+
+.myInfobox {
+    border: solid 1px black;
+    background-color:rgba(255, 255, 255, 0.5);
+    width: 280px;
+    color: #000;
+    font-family: Arial;
+    font-size: 14px;
+    padding: .5em 1em;
+    border-radius: 10px;
+    margin-left: -30px;
+    margin-top: -6px
+}
